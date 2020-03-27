@@ -4,5 +4,5 @@ function addNbr(a){
 
 
 function retour() {
-    rien
+    rien du tout
 }
