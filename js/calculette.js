@@ -3,6 +3,8 @@ function addNbr(a){
 }
 
 
-function retour() {
-    rien toujours
+function retour(){
+    var docu = document.getElementById("saisie").value;
+    var ret = docu.slice(0, -1);
+    document.getElementById("saisie").value = ret;
 }
