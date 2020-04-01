@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/calculette.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="js/calculette.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -16,14 +17,14 @@
             <div id="saisie"></div>
         </div>
         <div class="body-calc">
-            <button class="btn">CE</button>
-            <button class="btn" onclick="reset()">C</button>
+            <button class="btn" onclick="annul()">CE</button>
+            <button class="btn" onclick="effacer()">C</button>
             <button class="btn" onclick="retour()"><img src="img/delete.svg" alt=""></button>
             <button class="btn" onclick="addOp('/')"><img src="img/division.svg" alt=""></button>
             <button class="btn" onclick="addNbr(7)">7</button>
             <button class="btn" onclick="addNbr(8)">8</button>
             <button class="btn" onclick="addNbr(9)">9</button>
-            <button class="btn" onclick="addOp('x')"><img src="img/multiply.svg" alt=""></button>
+            <button class="btn" onclick="addOp('*')"><img src="img/multiply.svg" alt=""></button>
             <button class="btn" onclick="addNbr(4)">4</button>
             <button class="btn" onclick="addNbr(5)">5</button>
             <button class="btn" onclick="addNbr(6)">6</button>
@@ -34,8 +35,8 @@
             <button class="btn" onclick="addOp('-')"><img src="img/minus.svg" alt=""></button>
             <button class="btn"><img src="img/plus.svg" alt=""></button>
             <button class="btn" onclick="addNbr(0)">0</button>
-            <button class="btn">.</button>
-            <button class="btn"><img src="img/equal.svg" alt=""></button>
+            <button class="btn"onclick="addNbr('.')">.</button>
+            <button class="btn" onclick="calc()"><img src="img/equal.svg" alt=""></button>
         </div>
     </div>
 </section>
@@ -44,6 +45,6 @@
 
 
 
-<script src="js/calculette.js"></script>
+
 </body>
 </html>
