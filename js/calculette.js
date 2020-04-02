@@ -7,8 +7,7 @@ function addNbr(a)
     if (operateur == '')
     {
         document.getElementById('saisie').innerHTML += a;
-        ch1 = ch1 += a;  
-        console.log(ch1)  ; 
+        ch1 = ch1 += a; 
     } 
     else
     {
@@ -71,7 +70,6 @@ function calc(){
     }
 
     ch1 = calcul;
-    console.log(ch1)
     document.getElementById('saisie').innerHTML = ch1;
     operateur = '';
     ch2 = '';
