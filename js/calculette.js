@@ -28,6 +28,18 @@ function addOp(a)
     }
 }
 
+function plusMoins()
+{
+    if (ch2 == ''){
+        ch1 = -ch1;
+        document.getElementById('saisie').innerHTML = ch1;
+    }
+    else{
+        ch2 = (-ch2);
+        document.getElementById('saisie').innerHTML = ch1 + operateur + '(' + ch2 + ')';
+    }
+}
+
 function retour()
 {
     var origine = document.getElementById('saisie').innerHTML;
