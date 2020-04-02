@@ -2,22 +2,18 @@ var operateur = '';
 var ch1 = '';
 var ch2 = '';
 
-function addNbr(a)
-{
-    if (operateur == '')
-    {
+function addNbr(a){
+    if (operateur == ''){
         document.getElementById('saisie').innerHTML += a;
         ch1 = ch1 += a; 
     } 
-    else
-    {
+    else{
         document.getElementById('saisie').innerHTML += a;
         ch2 = ch2 += a ;
     }
 }
 
-function addOp(a)
-{
+function addOp(a){
     if (operateur == ''){
         document.getElementById('saisie').innerHTML += a;
         operateur = a;
@@ -28,8 +24,7 @@ function addOp(a)
     }
 }
 
-function plusMoins()
-{
+function plusMoins(){
     if (ch2 == ''){
         ch1 = -ch1;
         document.getElementById('saisie').innerHTML = ch1;
@@ -40,8 +35,7 @@ function plusMoins()
     }
 }
 
-function retour()
-{
+function retour(){
     if (operateur == ''){
         ch1 = ch1.slice(0, -1);
         document.getElementById('saisie').innerHTML = ch1;
@@ -52,36 +46,30 @@ function retour()
     }
 }
 
-function effacer()
-{
+function effacer(){
     document.getElementById('saisie').innerHTML = '';
     ch1 = '';
     ch2 = '';
     operateur = '';
 }
 
-function annul()
-{
+function annul(){
     if (operateur == ''){
         ch1 = ''; 
         document.getElementById('saisie').innerHTML = '';
-        console.log ("ch1:", ch1, "ch2:", ch2, "op:", operateur);
     }
     else if (operateur != '' && ch2 == ''){
         ch1 = '';
         operateur = '';
-        console.log ("ch1:", ch1, "ch2:", ch2, "op:", operateur);
         document.getElementById('saisie').innerHTML = '';
     }
     else{
         ch2 = '';
-        console.log ("ch1:", ch1, "ch2:", ch2, "op:", operateur);
         document.getElementById('saisie').innerHTML = ch1 + operateur + '';
     }
 }
 
 function calc(){
-
     switch (operateur)
     {
         case '+':
@@ -97,7 +85,6 @@ function calc(){
             var calcul = parseFloat(ch1) / parseFloat(ch2);
             break;
     }
-
     ch1 = '' + calcul;
     document.getElementById('saisie').innerHTML = ch1;
     operateur = '';
