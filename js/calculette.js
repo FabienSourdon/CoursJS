@@ -35,7 +35,7 @@ function plusMoins()
         document.getElementById('saisie').innerHTML = ch1;
     }
     else{
-        ch2 = (-ch2);
+        ch2 = -ch2;
         document.getElementById('saisie').innerHTML = ch1 + operateur + '(' + ch2 + ')';
     }
 }
