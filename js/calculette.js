@@ -42,9 +42,14 @@ function plusMoins()
 
 function retour()
 {
-    var origine = document.getElementById('saisie').innerHTML;
-    destina = origine.slice(0, -1);
-    document.getElementById('saisie').innerHTML = destina;
+    if (operateur == ''){
+        ch1 = ch1.slice(0, -1);
+        document.getElementById('saisie').innerHTML = ch1;
+    }
+    else {
+        ch2 = ch2.slice(0, -1);
+        document.getElementById('saisie').innerHTML = ch1 + operateur + ch2;
+    }
 }
 
 function effacer()
@@ -81,7 +86,7 @@ function calc(){
             break;
     }
 
-    ch1 = calcul;
+    ch1 = '' + calcul;
     document.getElementById('saisie').innerHTML = ch1;
     operateur = '';
     ch2 = '';
