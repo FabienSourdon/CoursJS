@@ -62,10 +62,22 @@ function effacer()
 
 function annul()
 {
-    var origine = document.getElementById('saisie').innerHTML;
-    destina = origine.slice(0, -ch2.length);
-    document.getElementById('saisie').innerHTML = destina;
-    ch2 = '';
+    if (operateur == ''){
+        ch1 = ''; 
+        document.getElementById('saisie').innerHTML = '';
+        console.log ("ch1:", ch1, "ch2:", ch2, "op:", operateur);
+    }
+    else if (operateur != '' && ch2 == ''){
+        ch1 = '';
+        operateur = '';
+        console.log ("ch1:", ch1, "ch2:", ch2, "op:", operateur);
+        document.getElementById('saisie').innerHTML = '';
+    }
+    else{
+        ch2 = '';
+        console.log ("ch1:", ch1, "ch2:", ch2, "op:", operateur);
+        document.getElementById('saisie').innerHTML = ch1 + operateur + '';
+    }
 }
 
 function calc(){
