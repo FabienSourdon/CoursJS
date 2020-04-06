@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    background: goldenrod;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 36px;
+    margin: 30px 0;
+}
+
+#coupsRest{
+    width: 500px;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#affiche{
+    width: 500px;
+    height: 50px;
+    background-color: white;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.9);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boutons{
+    width: 500px;
+    text-align: center;
+}
+
+.btn{
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: 0;
+}
